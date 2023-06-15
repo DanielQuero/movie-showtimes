@@ -8,6 +8,9 @@
     "playwright.config.*"
   ],
   "compilerOptions": {
+    "moduleResolution":"node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "composite": true,
     "module": "ESNext",
     "types": ["node"]
