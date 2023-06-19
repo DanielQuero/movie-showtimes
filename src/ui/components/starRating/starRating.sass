@@ -1,0 +1,32 @@
+@import '@/ui/assets/styles/_breakpoints.sass'
+
+.rating
+  text-align: left
+  font-style: normal
+  display: inline-block
+  position: relative
+  unicode-bidi: bidi-override
+  font-size: 100%
+
+.rating::before
+  display: block
+  content: '★★★★★★★★★★'
+  color: #eee
+
+.rating::after
+  white-space: nowrap
+  position: absolute
+  top: 0
+  left: 0
+  content: '★★★★★★★★★★'
+  width: var(--rating-width-percentage, 0)
+  color: #ff8c00
+  overflow: hidden
+  height: 100%
+  transition: width 1s ease-in-out
+
+@media (max-width: $tablet-breakpoint)
+  .rating::before
+    content: '★★★★★'
+  .rating::after
+    content: '★★★★★'
