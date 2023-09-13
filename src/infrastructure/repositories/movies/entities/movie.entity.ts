@@ -63,7 +63,7 @@ export interface MovieCastEntity {
 	name: string
 	original_name: string
 	popularity: number
-	profile_path: string
+	profile_path: string | null
 	cast_id: number
 	character: string
 	credit_id: string
@@ -77,7 +77,7 @@ export interface MovieCrewEntity {
 	name: string
 	original_name: string
 	popularity: number
-	profile_path: string
+	profile_path: string | null
 	credit_id: string
 	department: string
 	job: string

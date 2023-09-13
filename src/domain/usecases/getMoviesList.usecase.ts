@@ -13,7 +13,7 @@ export class GetMoviesList {
 	async execute(): Promise<MovieListItemModel[]> {
 		const params = {
 			api_key: import.meta.env.VITE_APP_MOVIEDB_API_KEY,
-			language: 'es-ES',
+			language: 'en-US',
 			page: 1,
 		}
 		return await this.movieRepository.getMoviesPaginated(params)

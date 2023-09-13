@@ -1,4 +1,7 @@
-import type { MovieDetailInfoResponse } from '@/infrastructure/repositories/movies/entities/movie.entity'
+import type {
+	MovieDetailCreditsResponse,
+	MovieDetailInfoResponse,
+} from '@/infrastructure/repositories/movies/entities/movie.entity'
 
 export const movieDetailInfoMocked: MovieDetailInfoResponse = {
 	adult: false,
@@ -93,7 +96,7 @@ export const movieDetailInfoMocked: MovieDetailInfoResponse = {
 	vote_count: 1489,
 }
 
-export const movieDetailCreditsMocked: any = {
+export const movieDetailCreditsMocked: MovieDetailCreditsResponse = {
 	id: 385687,
 	cast: [
 		{
