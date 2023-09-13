@@ -16,3 +16,8 @@ import { Component, Vue } from 'vue-facing-decorator'
 })
 export default class HomeView extends Vue {}
 </script>
+
+<style lang="sass">
+main
+  padding-top: 60px
+</style>
