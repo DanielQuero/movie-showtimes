@@ -1,7 +1,7 @@
 <template lang="pug">
-.movie-box
+router-link.movie-box(:to="{ name: 'movieDetail', params: { id: movieInfo.id } }")
   .movie-img-box
-    img.movie-img(:src="movieInfo.posterImgUrl")
+    img.movie-img(:src="movieInfo?.posterImgUrl")
   .movie-info-box
     .rating-row
       StarRating(:rating="movieInfo.voteAverage")

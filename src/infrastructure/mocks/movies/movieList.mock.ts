@@ -1,6 +1,4 @@
-// import { SubscriptionPlanResponse } from '@/infrastructure/repositories/subscriptionPlans/entities/subscriptionPlan.entity'
-
-import { MovieListResponse } from '@/infrastructure/repositories/movies/entities/movie.entity'
+import { MovieListResponse } from '@/infrastructure/repositories/movies/entities/movieList.entity'
 
 export const movieListMocked: MovieListResponse = {
 	dates: {

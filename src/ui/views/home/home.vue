@@ -2,8 +2,15 @@
 .bigger-container
   h1 Latest Movies
 
-  .movies-list
-    MovieCard(v-for="movie in moviesList" :movieInfo="movie")
+  .movies-list(:style="{ '--total': moviesList.length }")
+    transition-group(name="scale" appear)
+      MovieCard(
+        v-for="(movie, index) in moviesList"
+        :movieInfo="movie"
+        :key="movie.id"
+        :data-index="index"
+        :style="{ '--total': moviesList.length , '--i': `${index}`}"
+      )
 </template>
 
 <script lang="ts" src="./home.ts"/>

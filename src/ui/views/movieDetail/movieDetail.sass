@@ -1,0 +1,97 @@
+.image-container
+  width: 100%
+  height: 50dvh
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  img
+    width: 100%
+    height: auto
+    object-fit: cover
+
+.movie-section
+  height: 100px
+  display: flex
+  align-items: center
+  justify-content: center
+.movie-detail-floating-box
+  min-height: 485px
+  background: #222
+  border-radius: 10px
+  margin: 20px
+  padding: 20px
+
+  .movie-detail-box
+    display: flex
+    flex-wrap: wrap
+    .movie-img-box
+      flex: 2
+      min-width: 290px
+      img.movie-img
+        width: 100%
+        border-radius: 10px
+    .movie-info-box
+      flex: 5
+      margin: 0px 20px
+      .movie-title
+        font-size: 2.7em
+        margin-bottom: 10px
+      .rating-row
+        display: flex
+        align-items: center
+        margin: -5px 0px 10px 0px
+        .rating-component
+          font-size: 25px
+        .vote-average
+          font-size: 20px
+          margin-left: 20px
+        .vote-count
+          display: block
+      .genres-row
+        display: flex
+        flex-wrap: wrap
+        font-size: 14px
+        .chip
+          margin-right: .5rem
+          margin-bottom: .5rem
+          flex-shrink: 0
+          align-self: center
+          border: 1px solid var(--text-color)
+          border-radius: 50px
+          padding: 1px 15px
+      .crew-row
+        margin-top: 5px
+        display: flex
+        align-items: center
+        .crew-row-title
+          margin-right: 5px
+        .crew-member
+          .crew-member-name
+          .separator
+            margin-right: 5px
+    .movie-description-box
+
+  .movie-cast-box
+    display: flex
+    align-items: center
+    justify-content: center
+    max-width: 100%
+    overflow-x: auto
+    .cast-card
+      margin: 10px
+      background: #FFF
+      min-width: 150px
+      flex: 1
+      .image
+        width: 100%
+        height: 85%
+      .fake-title
+        padding: 5px
+        color: var(--main-color)
+
+@media screen and ( max-width: 480 )
+  .movie-title
+    font-size: 2em
+  .vote-count
+    min-width: 95px

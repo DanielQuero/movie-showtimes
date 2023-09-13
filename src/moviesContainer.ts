@@ -4,6 +4,7 @@ import { MOVIE_TYPES } from './application/types/MovieTypes'
 import { IHttpApi } from './domain/http/HttpApi'
 import { IUrlBuilder } from './domain/http/UrlBuilder'
 import { MovieRepository } from './domain/repositories/movieRepository'
+import { GetMovieDetail } from './domain/usecases/getMovieDetail.usecase'
 import { GetMoviesList } from './domain/usecases/getMoviesList.usecase'
 import { HttpApi } from './infrastructure/http/HttpApi'
 import { UrlBuilder } from './infrastructure/http/UrlBuilder'
@@ -28,5 +29,6 @@ export class MoviesContainer {
 		container.bind<MovieRepository>(MOVIE_TYPES.MOVIE_REPOSITORY).to(MovieRemoteRepository).inSingletonScope()
 
 		container.bind(MOVIE_TYPES.GET_MOVIES_LIST).to(GetMoviesList).inTransientScope()
+		container.bind(MOVIE_TYPES.GET_MOVIE_DETAIL).to(GetMovieDetail).inTransientScope()
 	}
 }
