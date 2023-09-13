@@ -11,7 +11,7 @@ import MovieCard from './components/movieCard/movieCard.vue'
 	},
 })
 export default class HomeView extends Vue {
-	@inject(MOVIE_TYPES.GET_MOVIES_LIST) private readonly getSubscriptionPlansList!: GetMoviesList
+	@inject(MOVIE_TYPES.GET_MOVIES_LIST) private readonly getMoviesList!: GetMoviesList
 
 	moviesList: MovieListItemModel[] = []
 
@@ -20,6 +20,6 @@ export default class HomeView extends Vue {
 	}
 
 	async getSuscriptionPlanList() {
-		this.moviesList = await this.getSubscriptionPlansList.execute()
+		this.moviesList = await this.getMoviesList.execute()
 	}
 }
