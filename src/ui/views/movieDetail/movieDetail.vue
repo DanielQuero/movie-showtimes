@@ -16,11 +16,6 @@
               span.vote-count &nbsp; ({{ movieInfo.voteCount }} voters)
             .genres-row
               .chip(v-for="genre in movieInfo.genres") {{ genre.name }}
-            .crew-row
-              .crew-row-title {{movieInfo.directors.length > 1 ? 'Directors' : 'Director'}}:
-              span.crew-member(v-for="(director, directorIndex) in movieInfo.directors")
-                span.crew-member-name {{ director.name }}
-                span.separator(v-if="directorIndex < movieInfo.directors.length - 1") ,
             .duration-row Duration: {{ movieInfo.runtime }} min
             .movie-description-box
               h3.movie-tagline {{ movieInfo.tagline }}

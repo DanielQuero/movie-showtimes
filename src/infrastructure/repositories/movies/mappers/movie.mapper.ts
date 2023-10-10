@@ -1,4 +1,4 @@
-import { MovieCastModel, MovieCrewModel, MovieModel } from '@/domain/models/movie/movie.model'
+import { MovieModel, MovieCrewModel } from '@/domain/models/movie/movie.model'
 import { MovieListItemModel } from '@/domain/models/movie/movieListItem.model'
 import {
 	MovieCastEntity,
@@ -48,34 +48,10 @@ export class MovieRepositoryMapper {
 			releaseDate: new Date(movieListInfo.release_date),
 			status: movieListInfo.status,
 			imdbId: movieListInfo.imdb_id,
-			cast: this.mapMovieCastAndOrderByPopularity(movieDetailCreditsInfo.cast),
 			runtime: movieListInfo.runtime,
 			genres: movieListInfo.genres,
 			directors: this.findCrewMemberByJob(movieDetailCreditsInfo.crew, ['Director']),
 		}
-	}
-
-	private mapMovieCastAndOrderByPopularity(movieCast: MovieCastEntity[]): MovieCastModel[] {
-		const profileImageWidth = '/w185'
-
-		return movieCast
-			.reduce((filtered: MovieCastModel[], castMember) => {
-				if (castMember.profile_path) {
-					const castMemberModel: MovieCastModel = {
-						id: castMember.id,
-						name: castMember.name,
-						character: castMember.character,
-						profileImgUrl: `${import.meta.env.VITE_APP_MOVIE_IMAGE_URL}/${profileImageWidth}/${
-							castMember.profile_path
-						}`,
-						popularity: castMember.popularity,
-					}
-					filtered.push(castMemberModel)
-				}
-
-				return filtered
-			}, [])
-			.sort((a, b) => b.popularity - a.popularity)
 	}
 
 	private findCrewMemberByJob(movieCast: MovieCrewEntity[], jobs: string[]): MovieCrewModel[] {

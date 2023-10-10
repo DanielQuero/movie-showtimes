@@ -10,18 +10,9 @@ export interface MovieModel {
 	releaseDate: Date
 	status: string
 	imdbId: string
-	cast: MovieCastModel[]
 	runtime: number
 	genres: GenreModel[]
 	directors: MovieCrewModel[]
-}
-
-export interface MovieCastModel {
-	id: number
-	name: string
-	character: string
-	profileImgUrl: string
-	popularity: number
 }
 
 export interface GenreModel {

@@ -1,10 +1,11 @@
 {
   "name": "movie-showtimes",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check build-only",
+    "build": "run-p build-only",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
@@ -29,6 +30,7 @@
     "dotenv": "^16.1.4",
     "eslint": "^8.39.0",
     "eslint-plugin-vue": "^9.11.0",
+    "gh-pages": "^6.0.0",
     "inversify-props": "^2.2.6",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",

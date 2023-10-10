@@ -1,17 +1,16 @@
 .image-container
   width: 100%
-  height: 50dvh
+  height: 55dvh
   display: flex
   align-items: center
   justify-content: center
   overflow: hidden
   img
     width: 100%
-    height: auto
+    height: 100%
     object-fit: cover
 
 .movie-section
-  height: 100px
   display: flex
   align-items: center
   justify-content: center
@@ -21,13 +20,14 @@
   border-radius: 10px
   margin: 20px
   padding: 20px
+  margin-top: -25vh
 
   .movie-detail-box
     display: flex
     flex-wrap: wrap
     .movie-img-box
       flex: 2
-      min-width: 290px
+      min-width: 280px
       img.movie-img
         width: 100%
         border-radius: 10px
@@ -43,11 +43,13 @@
         margin: -5px 0px 10px 0px
         .rating-component
           font-size: 25px
+          margin-bottom: 4px
         .vote-average
           font-size: 20px
           margin-left: 20px
         .vote-count
           display: block
+          white-space: nowrap
       .genres-row
         display: flex
         flex-wrap: wrap
@@ -70,28 +72,9 @@
           .crew-member-name
           .separator
             margin-right: 5px
-    .movie-description-box
 
-  .movie-cast-box
-    display: flex
-    align-items: center
-    justify-content: center
-    max-width: 100%
-    overflow-x: auto
-    .cast-card
-      margin: 10px
-      background: #FFF
-      min-width: 150px
-      flex: 1
-      .image
-        width: 100%
-        height: 85%
-      .fake-title
-        padding: 5px
-        color: var(--main-color)
-
-@media screen and ( max-width: 480 )
+@media screen and ( max-width: 480px )
+  .movie-detail-floating-box
+    margin-top: -50vh
   .movie-title
     font-size: 2em
-  .vote-count
-    min-width: 95px
