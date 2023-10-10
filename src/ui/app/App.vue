@@ -8,7 +8,7 @@ footer
       span Made by&nbsp;
       a(href="https://danielquero.github.io/" target="_blank") Daniel Quero
     .attributions-box
-      img(src="tmdb.svg")
+      img(src="/tmdb.svg")
       | This product uses the TMDB API but is not endorsed or certified by TMDB.
 </template>
 
