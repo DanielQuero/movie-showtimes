@@ -1,0 +1,79 @@
+.image-container
+  width: 100%
+  height: 55dvh
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.movie-section
+  display: flex
+  align-items: center
+  justify-content: center
+.movie-detail-floating-box
+  min-height: 485px
+  background: #222
+  border-radius: 10px
+  margin: 20px
+  padding: 20px
+  margin-top: -25vh
+
+  .movie-detail-box
+    display: flex
+    flex-wrap: wrap
+    .movie-img-box
+      flex: 2
+      min-width: 280px
+      img.movie-img
+        width: 100%
+        border-radius: 10px
+    .movie-info-box
+      flex: 5
+      margin: 0px 20px
+      .movie-title
+        font-size: 2.7em
+        margin-bottom: 10px
+      .rating-row
+        display: flex
+        align-items: center
+        margin: -5px 0px 10px 0px
+        .rating-component
+          font-size: 25px
+          margin-bottom: 4px
+        .vote-average
+          font-size: 20px
+          margin-left: 20px
+        .vote-count
+          display: block
+          white-space: nowrap
+      .genres-row
+        display: flex
+        flex-wrap: wrap
+        font-size: 14px
+        .chip
+          margin-right: .5rem
+          margin-bottom: .5rem
+          flex-shrink: 0
+          align-self: center
+          border: 1px solid var(--text-color)
+          border-radius: 50px
+          padding: 1px 15px
+      .crew-row
+        margin-top: 5px
+        display: flex
+        align-items: center
+        .crew-row-title
+          margin-right: 5px
+        .crew-member
+          .separator
+            margin-right: 5px
+
+@media screen and ( max-width: 480px )
+  .movie-detail-floating-box
+    margin-top: -50vh
+  .movie-title
+    font-size: 2em
